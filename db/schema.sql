@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS burgers_db;
+
 -- * Create the `burgers_db`.
 CREATE DATABASE burgers_db;
 
@@ -14,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `burgers`
 (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`burger_name` VARCHAR(255) NOT NULL,
-	`devoured` VARCHAR(255) NOT NULL DEFAULT false,
+	`devoured` BOOLEAN DEFAULT false,
 	`date` DATETIME NOT NULL,
 
 	PRIMARY KEY (`id`)
