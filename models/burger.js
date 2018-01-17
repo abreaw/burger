@@ -30,7 +30,7 @@ var burger = {
 	},
 
 	create: function(cols, values, callback) {
-		orm.create(tableName, function(result) {
+		orm.create(tableName, cols, values, function(result) {
 			callback(result);
 		});
 	},
