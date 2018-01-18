@@ -1,0 +1,14 @@
+
+{{!-- handling the setup of the button for the burgers columns --}}
+
+<li>
+	{{name}}
+
+	{{#if devoured}}
+		{{!-- not sure what to put here ... no button needed --}}
+		{{!-- but the burger list should be not clickable?? --}}
+	{{else}}
+		<button class="eat-da-burger" data-id="{{id}}" data-eaten="{{devoured}}">Devour It!</button>
+	{{/if}}
+	
+</li>
