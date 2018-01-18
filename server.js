@@ -6,10 +6,9 @@
 // ----------------------------------------------------------------------------------------------
 // dependencies -- NPM packages required to run the node server side code
 // ----------------------------------------------------------------------------------------------
-
-var express = required("express");
-var mo = required("method-override");
-var parser = required("body-parser");
+var express = require("express");
+var mo = require("method-override");
+var parser = require("body-parser");
 
 var PORT = process.env.PORT || 3000;
 
