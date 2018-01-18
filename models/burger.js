@@ -35,8 +35,8 @@ var burger = {
 		});
 	},
 
-	udpate: function(objColVals, condition, callback) {
-		orm.update(tableName, objColVals, condition function(results) {
+	update: function(objColVals, condition, callback) {
+		orm.update(tableName, objColVals, condition, function(results) {
 			callback(results);
 		});
 	}

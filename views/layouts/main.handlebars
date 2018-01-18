@@ -13,8 +13,10 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	{{!-- defined the public folder in the express server so the relative path is shown from the public folder aspect --}}
+	<link rel="stylesheet" href="/assets/css/styles.css" type="text/css" />
 
+	{{!-- defined the public folder in the express server so the relative path is shown from the public folder aspect --}}
 	<script src="/assets/js/burger.js"></script>
 
 </head>
@@ -22,10 +24,11 @@
 <body>
 
 	<div class="container">
-		<div class="jumbotron">
+		<div class="jumbotron center-view">
 			<h1>Eat-Da-Burger</h1>
 
-			<img src="http://vectips.com/wp-content/uploads/2016/02/25.jpg" class="img" alt="burger pic" style="width:80%;height:80%;">
+			<img src="http://www.freeiconspng.com/uploads/burger-cheeseburger-fast-fast-food-food-hamburger-sandwich-icon--30.png" class="img" alt="burger pic" style="width:20%;height:20%;">
+			{{!-- <img src="http://vectips.com/wp-content/uploads/2016/02/25.jpg" class="img" alt="burger pic" style="width:40%;height:40%;"> --}}
 			<h3>Create a burger or eat one that is already available!</h3>
 			<hr>
 

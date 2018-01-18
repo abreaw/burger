@@ -21,7 +21,7 @@ var router = express.Router();
 router.get("/", function(req, res) {
 	burger.all(function(data) {
 		var hndlbrsObject = {
-			burger: data
+			burgers: data
 		};
 		console.log(hndlbrsObject);
 		res.render("index", hndlbrsObject);
@@ -46,6 +46,7 @@ router.post("/api/burger", function(req, res) {
 router.put("/api/burger/:id", function(req, res) {
 
 	var condition = "id = " + req.params.id;
+	console.log("condition = " + condition);
 
 	burger.update({
 		devoured: req.body.devoured

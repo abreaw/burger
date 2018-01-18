@@ -8,6 +8,8 @@ $(function () {
 	// when the devoured button clicked
 	$(".eat-da-burger").on("click", function(event) {
 
+		console.log("burger devoured button clicked");
+
 		var id = $(this).data("id");
 		var burgerName = $(this).text();
 		// var newEaten = $(this).data("eaten"); 
@@ -18,7 +20,7 @@ $(function () {
 
 		// Send the update / PUT request to call the server side update
 		// function / logic in controller
-		$.ajax("/api/burgers/" + id, {
+		$.ajax("/api/burger/" + id, {
 
 			type: "PUT",
 			data: newDevouredState
@@ -45,7 +47,7 @@ $(function () {
 
 		// Send the insert new burger to database / POST request to the 
 		// server side function / logic in the controller
-		$.ajax("/api/burgers", {
+		$.ajax("/api/burger", {
 			type: "POST",
 			data: newBurger
 		}).then(
