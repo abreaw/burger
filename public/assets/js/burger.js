@@ -1,5 +1,8 @@
-// Make sure the DOM is fully loaded before we load the functions for the buttons
+// client side JavaScript to handle when the user clicks on the 
+// buttons to add a new burger and to eat an existing burger
 
+
+// Make sure the DOM is fully loaded before we load the functions for the buttons
 $(function () {
 
 	// when the devoured button clicked
