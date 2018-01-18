@@ -4,3 +4,47 @@
 
 {{!-- Setup columns here for burgers to go into --}}
 
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-12 burgers-list">
+
+		<ul>
+			{{#each burgers}}
+				{{#unless devoured}}
+					{{> burgers/burger-block devoured=false}}
+				{{/unless}}
+			{{/each}}
+		</ul>
+
+	</div>
+
+	<div class="col-lg-6 col-md-6 col-sm-12 burgers-eaten">
+
+		<ul>
+			{{#each burgers}}
+				{{#if devoured}}
+					{{> burgers/burger-block devoured=true}}
+				{{/if}}
+			{{/each}}
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+
+		<h2>Add Your Burger Here!</h2>
+
+		<!-- form for the burger input / labels -->
+		<div class="form-group">
+			<form class="form-horizontal" id="add-burger-form">
+				<label class="control-label">Name: </label>
+				<input class="form-control" type="text" name="name" id="name-input" placeholder="Delish Burger">
+				<br>
+				<button class="btn btn-default" id="add-burger-btn"type="button" onclick="/api/burgers" method="POST">Add Burger</button>
+			</form>
+		</div>
+	</div>
+
+</div>
