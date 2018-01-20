@@ -56,4 +56,6 @@ Allows a user to see the list of burgers that are available to eat as well as a 
 ## Instructions on How to use the Burger App
 The burger app can be used to Add burgers for the user to eat using the **"Add Burger"** button at the bottom section of the app.  The user can also choose a burger to eat by clicking on the **"Devour It!"** button next to the burgers name in the *"Ready to Eat"* List.  The user can see what burgers have already been added and eaten by looking at the *"Already Eaten"* List.
 
+You can also access this app hosted on Heroku [https://powerful-brook-52884.herokuapp.com/](https://powerful-brook-52884.herokuapp.com/)
+
 
