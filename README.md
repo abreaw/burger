@@ -4,7 +4,7 @@ MVC Architecture incorporated for a simple Full Stack Web Application that harne
 ## ScreenshotsFull App View
 
 Full App View
-![Full App View](https://github.com/abreaw/burger/tree/master/docs/images/app_screen_shot_v1.JPG)
+![Full App View](https://github.com/abreaw/burger/blob/master/docs/images/app_screen_shot_v1.JPG)
 
 Ready to Eat Burger List
 ![Ready to Eat Burgers](https://github.com/abreaw/burger/tree/master/docs/images/ready_to_eat_screen_shot_v1.JPG)
