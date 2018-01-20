@@ -45,11 +45,12 @@ Allows a user to see the list of burgers that are available to eat as well as a 
 			- You should get an output that looks something like this
 			- ![Seeds Command Line Output Example](https://github.com/abreaw/burger/blob/master/docs/images/seeds_cmd_line_output_v1.JPG)
 1. Change the configuration info to access your MySQL database based on where it is being hosted.
-	- ```{	port: 3306,
-		host: "localhost",
-		user: "root",
-		password: null,
-		database: "burgers_db" }```
+	- Create a *.env* file in your local folder in the root directory where your app is stored
+		- Add the following information to the *.env* file (the values of the keys should match your db information, below is just an example to show you the keys that should be used in your local file)
+		DB_HOST=localhost
+		DB_PORT=3306
+		DB_USER=root
+		DB_PSWD=null
 
 
 ## Instructions on How to use the Burger App
