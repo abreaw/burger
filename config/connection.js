@@ -6,20 +6,34 @@
 
 
 // ----------------------------------------------------------------------------------------------
-// add dependencies to the mysql npm package
+// add dependencies to the mysql & dotenv npm packages
 // ----------------------------------------------------------------------------------------------
 var mysql = require("mysql");
+var env = require("dotenv");
+
+// configures the .env file using the dotenv package inlcuded above
+env.config();
 
 // ----------------------------------------------------------------------------------------------
 // setup the connection information
 // ----------------------------------------------------------------------------------------------
-var connection = mysql.createConnection({
-	port: 3306,
-	host: "localhost",
-	user: "root",
-	password: "MySQLPswd",
-	database: "burgers_db"
-});
+var connection;
+
+// check to see if the db is being hosted locally or on heroku
+if (process.env.JAWSDB_URL) {
+	// set connection to the heroku JawsDB port / host / pswd info
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+}
+else {
+	// set the connection to use the local .env file w/ port / host / pswd info
+	connection = mysql.createConnection({
+		port: 3306,
+		host: process.env.DB_HOST,
+		user: process.env.DB_USER,
+		password: process.env.DB_PSWD,
+		database: "burgers_db"
+	});
+}
 
 // ----------------------------------------------------------------------------------------------
 // create the connection to the database for the server to use
