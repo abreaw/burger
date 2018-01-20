@@ -30,6 +30,11 @@ var burger = {
 	},
 
 	create: function(cols, values, callback) {
+
+		console.log("create function in burger.js model hit");
+		console.log("cols = ", cols);
+		console.log("values = ", values);
+
 		orm.create(tableName, cols, values, function(result) {
 			callback(result);
 		});

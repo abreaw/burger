@@ -4,11 +4,9 @@
 <li>
 	{{burger_name}}
 
-	{{#if devoured}}
-		{{!-- not sure what to put here ... no button needed --}}
-		{{!-- but the burger list should be not clickable?? --}}
-	{{else}}
+	{{!-- #unless evaluates if the variable is false --}}
+	{{#unless devoured}}
 		<button class="eat-da-burger" data-id="{{id}}" data-eaten="{{devoured}}">Devour It!</button>
-	{{/if}}
+	{{/unless}}
 
 </li>

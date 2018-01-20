@@ -37,13 +37,18 @@ var orm = {
 	// handles the create portion of the CRUD application
 	create: function(tableName, fieldsArray, valuesArray, callback) {
 
+		console.log("create in ORM hit ");
+		console.log("tableName = ", tableName);
+		console.log("fieldsArray = ", fieldsArray);
+		console.log("valuesArray = ", valuesArray);
+
 		// setting up query to add a row the specified table
 		// ex. "INSERT INTO burgers (burger_name) VALUES (?)";
 		var queryString = "INSERT INTO " + tableName;
 			queryString += " (";
 			queryString += fieldsArray.toString();
 			queryString += ") VALUES (";
-			queryString += addQuestionMarks(values.length);
+			queryString += addQuestionMarks(valuesArray.length);
 			queryString += ")";
 
 		console.log(queryString);
@@ -51,6 +56,8 @@ var orm = {
 		db.query(queryString, valuesArray, function(err, result) {
 
 			if (err) {
+				console.log("error happening in create query call");
+				console.log(err);
 				throw err;
 			}
 
@@ -72,7 +79,7 @@ var orm = {
 
 		console.log(queryString);
 
-		connection.query(queryString, function(err, result) {
+		db.query(queryString, function(err, result) {
 
 			if (err) {
 				throw err;

@@ -31,7 +31,11 @@ router.get("/", function(req, res) {
 
 router.post("/api/burger", function(req, res) {
 
-	var timeStamp = "NOW()";
+	console.log("post route hit in controller");
+
+	var timeStamp = new Date();
+	console.log("timeStamp = " + timeStamp);
+	// var timeStamp = "NOW()";
 
 	burger.create([
 		"burger_name", "devoured", "date"
@@ -39,7 +43,12 @@ router.post("/api/burger", function(req, res) {
 		req.body.name, req.body.eaten, timeStamp
 		], function(result) {
 			console.log(result);
-			res.json({id: result.insertId});
+			res.json(
+				{
+					id: result.insertId,
+					name: req.body.name
+				}
+			);
 		});
 });
 
@@ -56,6 +65,7 @@ router.put("/api/burger/:id", function(req, res) {
 			return res.status(404).end();
 		}
 		else {
+
 			res.status(200).end();
 		}
 	});

@@ -11,7 +11,6 @@ $(function () {
 		console.log("burger devoured button clicked");
 
 		var id = $(this).data("id");
-		var burgerName = $(this).text();
 		// var newEaten = $(this).data("eaten"); 
 
 		var newDevouredState = {
@@ -27,22 +26,23 @@ $(function () {
 		}). then(
 			function() {
 
-				console.log(burgerName + " has been eaten!");
-
 				location.reload();
+
 			}
 		);
 	});  // end of eat burger click function call
 
 
 	// when a new burger added
-	$("#add-burger-btn").on("submit", function(event) {
+	$("#add-burger-btn").on("click", function(event) {
 		// prevent the full page from being reloaded on the submit click
 		event.preventDefault();
 
+		console.log("add burger button clicked");
+
 		var newBurger = {
 			name: $("#name-input").val().trim(),
-			devoured: false  // all new burgers will be available for eating
+			eaten: 0  // all new burgers will be available for eating -- 0 equals false
 		};
 
 		// Send the insert new burger to database / POST request to the 
@@ -51,8 +51,8 @@ $(function () {
 			type: "POST",
 			data: newBurger
 		}).then(
-			function() {
-
+			function(newBurger) {
+				
 				console.log(newBurger.name + " created");
 				// reload the page to get the updated list showing
 				location.reload();
