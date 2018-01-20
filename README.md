@@ -7,13 +7,13 @@ Full App View
 ![Full App View](https://github.com/abreaw/burger/blob/master/docs/images/app_screen_shot_v1.JPG)
 
 Ready to Eat Burger List
-![Ready to Eat Burgers](https://github.com/abreaw/burger/tree/master/docs/images/ready_to_eat_screen_shot_v1.JPG)
+![Ready to Eat Burgers](https://github.com/abreaw/burger/blob/master/docs/images/ready_to_eat_screen_shot_v1.JPG)
 
 Already Eaten Burger List
-![Already Eaten Burgers](https://github.com/abreaw/burger/tree/master/docs/images/already_eaten_screen_shot_v1.JPG)
+![Already Eaten Burgers](https://github.com/abreaw/burger/blob/master/docs/images/already_eaten_screen_shot_v1.JPG)
 
 Add a Burger
-![Add a Burger](https://github.com/abreaw/burger/tree/master/docs/images/add_burger_screen_shot_v1.JPG)
+![Add a Burger](https://github.com/abreaw/burger/tree/blob/docs/images/add_burger_screen_shot_v1.JPG)
 
 
 ## Tech/framework used
@@ -39,33 +39,11 @@ Allows a user to see the list of burgers that are available to eat as well as a 
 		- Type `source schema.sql`
 			- This will run the SQL statements to create the Database and the table
 			- You should get an output that looks something like this
-			- ```Query OK, 1 row affected (0.21 sec)
-
-			Query OK, 1 row affected (0.00 sec)
-
-			Database changed
-			Query OK, 0 rows affected (0.20 sec)
-
-			Empty set (0.00 sec)
-			```
+			- ![Schema Command Line Output Example](https://github.com/abreaw/burger/blob/master/docs/images/schema_cmd_line_output_v1.JPG)
 		- Type `source seeds.sql`
 			- This will add the initial data into the existing table
 			- You should get an output that looks something like this
-			- ```Database changed
-			Query OK, 5 rows affected (0.05 sec)
-			Records: 5  Duplicates: 0  Warnings: 0
-
-			+----+-------------------+----------+---------------------+
-			| id | burger_name       | devoured | date                |
-			+----+-------------------+----------+---------------------+
-			|  1 | Whatta Burger     |        0 | 2018-01-15 20:18:39 |
-			|  2 | Finish Him Burger |        0 | 2018-01-15 20:18:39 |
-			|  3 | BLT Burger        |        1 | 2018-01-15 20:18:39 |
-			|  4 | Just Eat It       |        1 | 2018-01-15 20:18:39 |
-			|  5 | Beleaf in Me      |        0 | 2018-01-15 20:18:39 |
-			+----+-------------------+----------+---------------------+
-			5 rows in set (0.00 sec)
-			```
+			- ![Seeds Command Line Output Example](https://github.com/abreaw/burger/blob/master/docs/images/seeds_cmd_line_output_v1.JPG)
 1. Change the configuration info to access your MySQL database based on where it is being hosted.
 	- ```{
 		port: 3306,
