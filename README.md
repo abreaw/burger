@@ -13,7 +13,7 @@ Already Eaten Burger List
 ![Already Eaten Burgers](https://github.com/abreaw/burger/blob/master/docs/images/already_eaten_screen_shot_v1.JPG)
 
 Add a Burger
-![Add a Burger](https://github.com/abreaw/burger/tree/blob/docs/images/add_burger_screen_shot_v1.JPG)
+![Add a Burger](https://github.com/abreaw/burger/blob/master/docs/images/add_burger_screen_shot_v1.JPG)
 
 
 ## Tech/framework used
@@ -51,8 +51,7 @@ Allows a user to see the list of burgers that are available to eat as well as a 
 		user: "root",
 		password: "MySQLPswd",
 		database: "burgers_db"
-	}
-	```
+	}```
 
 
 ## Instructions on How to use the Burger App
