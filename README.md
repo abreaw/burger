@@ -1,5 +1,5 @@
 ## Eat-da-Burger Full Stack Web App
-MVC Architecture incorporated for a simple Full Stack Web Application that harnesses the power of MySQL, Node, Express, Handlebars and ![Object Relational Mapping (ORM)](https://en.wikipedia.org/wiki/Object-relational_mapping) usage.
+MVC Architecture incorporated for a simple Full Stack Web Application that harnesses the power of MySQL, Node, Express, Handlebars and -[Object Relational Mapping (ORM)](https://en.wikipedia.org/wiki/Object-relational_mapping) usage.
 
 ## ScreenshotsFull App View
 
